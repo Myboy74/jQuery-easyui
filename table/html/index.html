@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <link rel="stylesheet" type="text/css" href="../css/demo.css">
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/echarts.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <!-- 菜单 节点树 -->
+        <div class="fl menu">
+            <div class="easyui-panel" style="padding:5px">
+                <ul id="tt" class="easyui-tree" data-options="checkbox:true"></ul>
+            </div>
+        </div>
+        <!-- 内容区域 -->
+        <div class="fl content">
+            <!-- 头部区域 -->
+            <div class="nav cle">
+                <div class="fl">
+                    <span class="showTitle">显示方式</span>
+                    <select id="cc" style="width:150px"></select>
+                    <div id="sp">
+                        <p value="0">表格</p>
+                        <p value="1">图表</p>
+                    </div>
+                </div>
+                <div class="fl state">
+                    <span class="showTitle">状态选择</span>
+                    <form id="ff" class="fl stateCheck">
+                        <!-- <input class="easyui-checkbox" name="fruit" value="Apple" labelPosition="after" label="未知状态">-->
+                    </form>
+                </div>
+            </div>
+            <!-- 表格 图表 区域 -->
+            <div class="cle table" id="tabCon">
+                <div style="display: block">
+                    <table id="dg" class="easyui-datagrid" title="" style="width: 100%;max-height:250px"
+                    data-options="striped:true,singleSelect:true,
+                    collapsible:false,method:'get'">
+                    <!-- fitColumns:true,自动扩大或缩小列的尺寸以适应网格的宽度并且防止水平滚动 -->
+                    <!-- <thead>
+                        <tr>
+                            <th data-options="field:'itemid',width:80">Item ID</th>
+                        </tr>
+                    </thead> -->
+                    </table>
+                    <div id="pp" style="background:#efefef;border:1px solid #ccc;border-top:none"></div>
+                </div>
+                <div style="display: none;">
+                    <ul class="chart">
+                        <!-- <li>
+                            <div class="chartTitle">
+                                <p class="chartNum fl">工号A2222s</p>
+                                <p class="fr f_yellow">未知状态</p>
+                            </div>
+                            <p class="chartCon">
+                                <span class="chartNum fl">分机</span>
+                                <span class="fr chartState">4567</span>
+                            </p>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- echarts区域 -->
+        <div class="content" style="margin-bottom:20px">
+            <div style="width:90%; margin: 0 auto">
+                <div class="echartState">
+                    <span class="showTitle fl">状态选择</span>
+                    <form id="fs" class="fl stateCheck">
+                        <!-- <input class="easyui-checkbox" name="fruit" value="Apple" labelPosition="after" label="未知状态">-->
+                    </form>
+                </div>
+                <div id="echarts" style="width:100%;height:300px;clear: both;margin-left:20px"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+</body>
+</html>

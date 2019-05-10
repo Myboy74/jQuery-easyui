@@ -1,0 +1,152 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.fl{ float:left }
+.fr{float: right}
+.cle{clear: both;}
+.box{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    background: #d5d4d4;
+}
+.menu{
+    width: 20%;
+    height: 100%;
+    background: white;
+    /* box-sizing: border-box; */
+}
+.menu .panel-body{
+    border:none
+}
+.content{
+    width: 77%;
+    float: right;
+    background: white;
+    margin: 20px 20px 0 0;
+    padding: 5px 0 20px 0;
+    box-sizing: border-box;
+    clear: both;
+    overflow: hidden;
+}
+.menu .tree-folder, .menu .tree-file{
+    width: 0;
+    height: 0;
+}
+.nav{
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #aeaeae;
+}
+#sp p{
+    padding: 10px;
+}
+#sp p:hover ,#sp p.selected{
+    background-color: #eaeefa;
+    color: #4084e6;
+}
+.showTitle{
+    padding: 0 10px;
+    line-height: 40px;
+    display: block;
+    float: left;
+}
+.nav .state{
+    margin-left: 30px;
+    position: relative;
+}
+.nav .state::after{
+    content:"";
+    width: 0;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translate(0, -50%);
+    border-left: 1px solid #aeaeae;
+}
+.stateCheck{
+    padding-top: 10px
+}
+/* 状态选择颜色 */
+.f_yellow{  /* 未知状态 */
+    color: #fa9a31;
+}
+.f_gray{ /* 已退出 */
+    color: #bbc4d3;
+}
+.f_lightBlue{ /* 准备好 */
+    color: #6cdcf7;
+}
+.f_orange{ /* 未准备好 */
+    color: #f6ca48;
+}
+.f_green{ /* 接听电话 */
+    color: #90d59f;
+}
+.f_blue{ /* 拔出电话 */
+    color: #4084e6;
+}
+.f_red{ /* 示忙 */
+    color: #f57a7b;
+}
+.table{
+    padding: 0 20px;
+    margin-top: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+.pagination-info{
+    display: none;
+}
+.chart, .chart li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.chart{
+    padding-left: 20px;
+}
+.chart li{
+    width: 23%;
+    min-height: 280px;
+    float: left;
+    margin: 0 15px 20px 0;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+.chart li .chartTitle,.chart li .chartCon{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+}
+.chartTitle{
+     background: #dfe6f3;
+}
+.chartCon{
+    color: #818581;
+}
+.chartNum{
+    /* font-weight: bold; */
+}
+.chartState{
+    max-width: 75%;
+    white-space: nowrap;    /*规定文本不换行**/
+    text-overflow: ellipsis;  /**显示省略符号来代表被修剪的文本。*/
+    overflow: hidden;
+}
+.echartState .showTitle{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+}
